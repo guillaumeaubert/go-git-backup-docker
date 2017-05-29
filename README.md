@@ -2,6 +2,12 @@ Docker Image for go-git-backup
 ==============================
 
 
+Code Status
+-----------
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/aubertg/go-git-backup-docker.svg)](https://hub.docker.com/r/aubertg/go-git-backup-docker/)
+
+
 Copyright
 ---------
 
