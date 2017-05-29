@@ -19,7 +19,7 @@ RUN apk add --update \
 		mailx \
 	&& rm -rf /var/cache/apk/* \
 	&& addgroup abc \
-  && adduser -s /bin/bash -G abc -H -D abc
+	&& adduser -s /bin/bash -G abc -H -D abc
 
 # Add Golang prerequisites.
 RUN go get gopkg.in/yaml.v2
