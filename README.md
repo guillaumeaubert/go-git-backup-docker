@@ -17,13 +17,13 @@ A Docker image that runs go-git-backup via cron for regular backups of GitHub an
 	docker run \
 		-v /host/storage/path/:/data \
 		-v /my/host/.gitbackuprc.yml:/etc/gitbackuprc.yml \
-		-v /my/host/ssmtp.conf:/etc/ssmtp/ssmtp.conf
+		-v /my/host/ssmtp.conf:/etc/ssmtp/ssmtp.conf \
 		-t \
 		-d \
 		--name=GitBackups \
 		-e BACKUPS_UID=$(id -u myuser) \
 		-e BACKUPS_GID=$(id -g myuser) \
-		--memory="512m"
+		--memory="512m" \
 		aubertg/go-git-backup-docker
 
 
