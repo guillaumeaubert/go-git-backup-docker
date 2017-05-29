@@ -43,8 +43,33 @@ properly:
 	part of this file is set to `/data` so that backups are correctly stored on
 	the host.
 
+	Example:
+	```
+	backup_directory: /data
+	targets:
+	  - name: github-mygithubusername
+	    source: github
+	    type: users
+	    entity: mygithubusername
+	    token: mysecrettoken
+	```
+
 * **`/etc/ssmtp/ssmtp.conf`** <br />
 	An ssmtp config file to send emails reports from the Docker container.
+
+	Example for Gmail:
+	```
+	# Settings for Gmail SMTP service.
+	mailhub=smtp.gmail.com:587
+	hostname=smtp.gmail.com:587
+	UseSTARTTLS=YES
+	FromLineOverride=YES
+
+	# Gmail account.
+	root=mygmailaddress@gmail.com
+	AuthUser=mygmailaddress@gmail.com
+	AuthPass=mypassword
+	```
 
 
 Environment Variables
