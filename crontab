@@ -1,2 +1,3 @@
-*/15 * * * * root /app/heartbeat.sh
-11   2 * * * root /app/daily-backup-wrapper.sh
+# min   hour    day     month   weekday command
+*/15    *       *       *       *       /app/heartbeat.sh
+11      2       *       *       *       /app/daily-backup-wrapper.sh

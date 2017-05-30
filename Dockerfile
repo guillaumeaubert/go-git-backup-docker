@@ -31,7 +31,7 @@ RUN git clone https://github.com/guillaumeaubert/go-git-backup.git $GOPKGDIR
 COPY heartbeat.sh /app/
 COPY daily-backup.sh /app/
 COPY daily-backup-wrapper.sh /app/
-COPY crontab /etc/cron.d/go-git-backup
+COPY crontab /var/spool/cron/crontabs/root
 
 # Launch app.
 COPY entrypoint.sh /app/
