@@ -33,10 +33,10 @@ Volumes
 The container requires the following volumes to be attached in order to work
 properly:
 
-* **`/data`** <br />
+* **`/data`**  
 	Where the git clones will be stored.
 
-* **`/etc/gitbackuprc.yml`** <br />
+* **`/etc/gitbackuprc.yml`**  
 	A go-git-backup configuration file. See [go-git-backup
 	setup](https://github.com/guillaumeaubert/go-git-backup#setup) for a
 	description of the format of this file. Make sure that the `backup_directory`
@@ -54,7 +54,7 @@ properly:
 	    token: mysecrettoken
 	```
 
-* **`/etc/ssmtp/ssmtp.conf`** <br />
+* **`/etc/ssmtp/ssmtp.conf`**  
 	An ssmtp config file to send emails reports from the Docker container.
 
 	Example for Gmail:
@@ -77,13 +77,13 @@ Environment Variables
 
 The container is configurable through the following environment variables:
 
-* **`BACKUPS_UID`** *(optional)* <br />
+* **`BACKUPS_UID`** *(optional)*  
   A numeric uid in the host that should own created files.
 
-* **`BACKUPS_GID`** *(optional)* <br />
+* **`BACKUPS_GID`** *(optional)*  
   A numeric gid in the host that should own created files.
 
-* **`BACKUPS_TZ`** *(optional, defaults to America/Los_Angeles)* <br />
+* **`BACKUPS_TZ`** *(optional, defaults to America/Los_Angeles)*  
   Timezone for the backup processes.
 
 
