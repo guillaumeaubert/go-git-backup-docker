@@ -18,3 +18,6 @@ echo "$HLINE"
 # Back up git repositories.
 go run $GOPKGDIR/gitbackup.go -config /etc/gitbackuprc.yml
 echo "$HLINE"
+
+# Add a flag with the completion time.
+date +%s > /data/.last_completed
