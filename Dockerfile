@@ -1,13 +1,12 @@
 FROM golang:alpine
 MAINTAINER Guillaume Aubert "aubertg@cpan.org"
 
-ENV FIRST_RUN_FLAG /app/.first_run
-ENV GOPATH /go
-ENV PATH /go/bin:$PATH
-ENV GOPKGDIR='/go/src/github.com/guillaumeaubert/go-git-backup'
+ENV FIRST_RUN_FLAG="/app/.first_run" \
+	GOPATH="/go" \
+	PATH="/go/bin:$PATH" \
+	GOPKGDIR="/go/src/github.com/guillaumeaubert/go-git-backup"
 
 VOLUME /data
-RUN mkdir /app
 
 # Set up environment.
 RUN apk add --update \
@@ -17,8 +16,8 @@ RUN apk add --update \
 		ssmtp \
 		tzdata \
 		mailx \
-	&& rm -rf /var/cache/apk/* \
-	&& addgroup abc \
+	&& rm -rf /var/cache/apk/*
+RUN addgroup abc \
 	&& adduser -s /bin/bash -G abc -H -D abc
 
 # Add Golang prerequisites.
@@ -28,6 +27,7 @@ RUN go get gopkg.in/yaml.v2
 RUN git clone https://github.com/guillaumeaubert/go-git-backup.git $GOPKGDIR
 
 # Schedule regular checks.
+RUN mkdir /app
 COPY heartbeat.sh /app/
 COPY daily-backup.sh /app/
 COPY daily-backup-wrapper.sh /app/
