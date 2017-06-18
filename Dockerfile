@@ -34,7 +34,7 @@ COPY daily-backup-wrapper.sh /app/
 COPY crontab /var/spool/cron/crontabs/root
 
 # Launch app.
-COPY entrypoint.sh /app/
+COPY start.sh /app/
 RUN touch $FIRST_RUN_FLAG
 WORKDIR /app
-CMD ["/app/entrypoint.sh"]
+CMD ["/app/start.sh"]
