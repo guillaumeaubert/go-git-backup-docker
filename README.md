@@ -5,6 +5,7 @@ Docker Image for go-git-backup
 Code Status
 -----------
 
+[![Docker Build Status](https://img.shields.io/docker/build/aubertg/go-git-backup-docker.svg)](https://hub.docker.com/r/aubertg/go-git-backup-docker/builds/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/aubertg/go-git-backup-docker.svg)](https://hub.docker.com/r/aubertg/go-git-backup-docker/)
 
 
